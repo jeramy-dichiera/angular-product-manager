@@ -2,7 +2,7 @@ import { Component } from "@angular/core";
 
 @Component({
   selector: 'pm-root',
-  template: `{{ pageTitle }}`
+  templateUrl: './app.component.html'
 })
 export class AppComponent {
   pageTitle: string = "My Title";
