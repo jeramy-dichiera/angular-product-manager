@@ -1,19 +1,11 @@
 import { Component } from '@angular/core'
+import { IProduct } from './product';
 
 @Component({
   selector: 'pm-products',
-  templateUrl: './product-list.component.html'
+  templateUrl: './product-list.component.html',
+  styleUrls: ['./product-list.component.css']
 })
-export interface IProduct {
-  price: number,
-  imageUrl: string
-  productId: number,
-  starRating: number,
-  productName: string,
-  productCode: string,
-  releaseDate: string,
-  description: string,
-}
 export class ProductListComponent {
   listFilter: string = 'cart';
   imageWidth: number = 50;
