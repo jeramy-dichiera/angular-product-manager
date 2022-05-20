@@ -4,9 +4,23 @@ import { Component } from '@angular/core'
   selector: 'pm-products',
   templateUrl: './product-list.component.html'
 })
+export interface IProduct {
+  price: number,
+  imageUrl: string
+  productId: number,
+  starRating: number,
+  productName: string,
+  productCode: string,
+  releaseDate: string,
+  description: string,
+}
 export class ProductListComponent {
+  listFilter: string = 'cart';
+  imageWidth: number = 50;
+  imageMargin: number = 2;
+  showImage: boolean = false;
   pageTitle: string = 'Product List';
-  products: any[] = [
+  products: IProduct[] = [
     {
     "productId": 2,
     "productName": "Garden Cart",
@@ -28,4 +42,8 @@ export class ProductListComponent {
       "imageUrl": "assets/images/hammer.png"
     }
   ];
+
+  toggleImage(): void {
+    this.showImage = !this.showImage;
+  }
 }
